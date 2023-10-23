@@ -1,9 +1,30 @@
 
 
 const AddProduct = () => {
+
+
+    const handleAddProduct = event =>{
+        
+        event.preventDefault();
+
+        const form = event.target;
+        const brand = form.brand.value;
+        const model = form.model.value;
+        const description = form.description.value;
+        const rating = form.rating.value;
+        const type = form.type.value;
+        const price = form.price.value;
+        const image = form.image.value;
+
+        const newProduct = {brand,model,type,price,description,rating,image}
+        console.log(newProduct);
+
+    }
+
+
     return (
         <div>
-            <form className="mx-5 my-8 p-24">
+            <form onSubmit={handleAddProduct} className="mx-5 my-8 p-10">
                 <h2 className="text-3xl text-center font-extrabold bg-slate-700 py-5 text-white">Please input the form to add product.</h2>
                 {/* Model and Brand Name */}
                 <div className="md:flex ">
@@ -82,7 +103,7 @@ const AddProduct = () => {
                         {/* <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">Responsive</button> */}
                     </div>
                 </div>
-                <button type="submit" value="Add Product" className="btn bg-gray-900 text-lime-500 btn-block py-4">Add Product</button>
+                <button type="submit" value="Add Product" className="btn bg-gray-900 text-2xl text-lime-500 btn-block">Add Product</button>
             </form>
         </div>
     );
