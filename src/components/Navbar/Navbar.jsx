@@ -16,7 +16,7 @@ const Navbar = () => {
 
 
     return (
-        <div>
+        <div className='mx-4'>
             <div className="navbar bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -36,8 +36,8 @@ const Navbar = () => {
                             <li><a>Item 3</a></li> */}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case md:text-3xl">AutoSpaceZ</a>
-                    <img className='w-6 md:w-24 md:h-14 rounded-md' src="/autospacez1.png" alt="" />
+                    <a className="btn btn-ghost text-white bg-neutral-950 md:h-14 normal-case md:text-3xl">AutoSpaceZ</a>
+                    <img className='w-6 md:w-24 md:h-14 rounded-md ml-2' src="/AutoSpaceZ2.png" alt="" />
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -56,7 +56,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Sign Up</a>
+                    <a className="btn bg-black text-white">Sign Up</a>
                 </div>
             </div>
         </div>
