@@ -8,7 +8,7 @@ const ServiceCard = ({ service }) => {
         <div>
             <div className="card bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
-                    <img src={brandImage} alt="Shoes" className="rounded-xl" />
+                    <img src={brandImage} alt="Shoes" className="rounded-xl md:h-48" />
                 </figure>
                 <div className="card-body items-center text-center">
                     
