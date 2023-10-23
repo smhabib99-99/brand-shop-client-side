@@ -7,10 +7,10 @@ function App() {
   return (
     <>
       <div className='text-3xl text-center'>
-        <h1>Vite + React</h1>
+        <h1>Brand Shop</h1>
       </div>
     </>
   )
 }
 
-export default App
+export default App;
