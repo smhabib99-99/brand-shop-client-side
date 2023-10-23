@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "brandName": "Porche",
+        "brandImage": "https://i.ibb.co/T8QZJMx/conferences.jpg"
+        
+    },
+    {
+        "id": 2,
+        "brandName": "Lamborghini",
+        "brandImage": "https://i.ibb.co/T8QZJMx/conferences.jpg"
+        
+    },
+    {
+        "id": 3,
+        "brandName": "Bugatti",
+        "brandImage": "https://i.ibb.co/T8QZJMx/conferences.jpg"
+        
+    },
+    {
+        "id": 4,
+        "brandName": "Rolls-Royace",
+        "brandImage": "https://i.ibb.co/T8QZJMx/conferences.jpg"
+        
+    },
+    {
+        "id": 5,
+        "brandName": "Tesla",
+        "brandImage": "https://i.ibb.co/T8QZJMx/conferences.jpg"
+        
+    },
+    {
+        "id": 6,
+        "brandName": "Ferrari",
+        "brandImage": "https://i.ibb.co/T8QZJMx/conferences.jpg"
+        
+    },
+    {
+        "id": 7,
+        "brandName": "Mercedes-Benz",
+        "brandImage": "https://i.ibb.co/T8QZJMx/conferences.jpg"
+        
+    },
+    {
+        "id": 8,
+        "brandName": "McLaren",
+        "brandImage": "https://i.ibb.co/T8QZJMx/conferences.jpg"
+        
+    },
+    {
+        "id": 1,
+        "brandName": "Ford",
+        "brandImage": "https://i.ibb.co/T8QZJMx/conferences.jpg"
+        
+    }
+]
