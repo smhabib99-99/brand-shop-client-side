@@ -8,7 +8,7 @@ const Banner = () => {
                 <div className="hero-content text-center text-neutral-content">
                     <div className="max-w-md">
                         <h1 className="mb-5 text-3xl font-bold">Hi there!!! Your Dream Super Sports Car Journey Begins Here!!! </h1>
-                        <p className="mb-5">Let's start Your Journey Now...</p>
+                        <p className="mb-5">Let Us Start Your Journey Now...</p>
                         <button className="btn bg-black text-white">Get Started</button>
                     </div>
                 </div>

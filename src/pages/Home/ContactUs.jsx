@@ -12,7 +12,7 @@ const ContactUs = () => {
 
                 <div className="flex item-center">
 
-                    <form className=" mx-auto items-center border shadow-md">
+                    <form className=" mx-auto bg-sky-50 items-center border">
                         <div >
                             <div className=" md:w-1/2 px-3 mb-6 md:mb-0">
                                 <label className=" min-w-full  uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
