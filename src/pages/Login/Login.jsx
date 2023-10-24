@@ -2,12 +2,15 @@
 // import {GoogleAuthProvider, getAuth, signInWithPopup, signOut} from 'firebase/auth';
 // import app from '../../firebase/firebase.config';
 // import { useState } from 'react';
+import { useContext } from 'react';
 import toast from 'react-hot-toast';
 
 import { Link } from "react-router-dom";
+import { AuthContext } from '../../providers/AuthProvider';
 
 const Login = () => {
 
+    const {signInUser} = useContext(AuthContext);
 
 
     const handleLogin = e => {
@@ -16,7 +19,15 @@ const Login = () => {
         // const name = e.target.name.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
-        console.log(name, email, password)
+        console.log(email, password)
+
+        signInUser(email,password)
+        .then(result => {
+            console.log(result.user)
+        })
+        .catch(error=>{
+            console.error(error)
+        })
 
 
         // react-hot-toast
