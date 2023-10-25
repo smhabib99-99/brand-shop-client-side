@@ -5,6 +5,16 @@ import { getAuth } from "firebase/auth";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+// const firebaseConfig = {
+//   apiKey: import.meta.env.VITE_APIKEY,
+//   authDomain:import.meta.env.VITE_AUTHDOMAIN,
+//   projectId:import.meta.env.VITE_PROJECTID,
+//   storageBucket:import.meta.env.VITE_STORAGEBUCKET,
+//   messagingSenderId:import.meta.env.VITE_MESSAGINGSENDERID,
+//   appId:import.meta.env.VITE_APPID
+// };
+
+
 const firebaseConfig = {
   apiKey: "AIzaSyCTsmXM8S_Q90NYtnLtU81x3LeN6sBhl-E",
   authDomain: "brand-shop-client-d5117.firebaseapp.com",
