@@ -1,8 +1,47 @@
+import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
-const ProductsCard = ({product}) => {
+const ProductsCard = ({ product }) => {
 
-    const {brand,model,type,price,description,rating,image} = product;
+    const { _id, brand, model, type, price, description, rating, image } = product;
+
+    const hadleDelete = _id => {
+        console.log(_id);
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+
+                fetch(`http://localhost:5000/product/${_id}`,{
+                    method:'DELETE'
+                })
+                    .then(res => res.json())
+                    .then(
+                        data => {
+                            console.log(data);
+                            if (data.deleteCount > 0) {
+
+                                  Swal.fire(
+                                    'Deleted!',
+                                    'Your file has been deleted.',
+                                    'success'
+                                  )
+                            }
+                        }
+                    )
+
+
+            }
+        })
+    }
 
     return (
         <div>
@@ -16,7 +55,15 @@ const ProductsCard = ({product}) => {
                     <p>Type:{type}</p>
                     <span>Rating:{rating}*</span>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Details</button>
+                        {/* <button className="btn btn-primary">Details</button> */}
+                        <div className="btn-group btn-group-vertical space-y-4">
+                            <button className="btn btn-active">Details</button>
+                            <button onClick={() => hadleDelete(_id)} className="btn bg-red-500 rounded-md">Delete</button>
+                       <Link to={`updateProduct/${_id}`}>
+                       <button
+                                className="btn bg-green-500">Update</button>
+                       </Link>
+                        </div>
                     </div>
                 </div>
             </div>
