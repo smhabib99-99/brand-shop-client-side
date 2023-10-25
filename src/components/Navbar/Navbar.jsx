@@ -1,11 +1,12 @@
 
 import { useContext } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 
 const Navbar = () => {
+    const navigate = useNavigate();
 
-    const {user,logOut} = useContext(AuthContext);
+    const {user,logOut,signInWithGoogle} = useContext(AuthContext);
 
     const handleLogOut = () =>{
 
@@ -16,12 +17,32 @@ const Navbar = () => {
         .catch(error=>console.error(error))
     }
 
+    const handleGoogleSignIn = () =>{
+        signInWithGoogle()
+        .then(result=>{
+            console.log(result.user);
+            navigate('/')
+        })
+        .catch(error=>{
+            console.error(error);
+        })
+    }
+
     const navLinks = <>
     <li><NavLink to='/'>Home</NavLink></li>
     <li><NavLink to='/login'>Login</NavLink></li>
     <li><NavLink to='/register'>Register</NavLink></li>
     <li><NavLink to='/addProduct'>Add Product</NavLink></li>
-    <li><NavLink to='/myCart'>My Cart</NavLink></li>
+    
+
+    {
+        user && <>
+        <li><NavLink to='/myCart'>My Cart</NavLink></li>
+        <li><NavLink to='/updateProduct'>Update Product</NavLink></li>
+        </>
+    }
+
+
     {/* <li><NavLink to='/about'>About Us</NavLink></li> */}
     {/* <li><NavLink to='/contactUs'>Contact Us</NavLink></li> */}
     {/* <li><NavLink to='/authorizedShop'>Authorized Shop</NavLink></li> */}
@@ -75,12 +96,14 @@ const Navbar = () => {
                         user ?
                              <>
                              <span>{user.email}</span>
-                             <img src={user.photoURL} alt="" />
+                             <img className='rounded-lg w-10' src={user.photoURL} alt="" />
                              <a onClick={handleLogOut} className="btn bg-black text-white">Log out</a>
 
                              </>   :
                              <Link to="/login">
                                 <button className='btn btn-sm'>Login</button>
+                            <button onClick={handleGoogleSignIn} type="submit" className="btn-sm btn-ghost rounded-md bg-black text-white">Google Login</button>
+
                              </Link>
                                               
                     }
