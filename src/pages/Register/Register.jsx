@@ -1,14 +1,16 @@
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import auth from "../../firebase/firebase.config";
-import toast from 'react-hot-toast';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import Swal from "sweetalert2";
 
 
 const Register = () => {
 
+    
     const {createUser} = useContext(AuthContext)
+    const navigate = useNavigate();
 
     const handleRegister = e => {
         e.preventDefault();
@@ -21,6 +23,8 @@ const Register = () => {
         createUser(email,password)
         .then(result=>{
             console.log(result.user);
+            e.target.reset();
+            navigate('/');
         })
         .catch(error=>{
             console.error(error);
@@ -29,11 +33,21 @@ const Register = () => {
 
         // react-hot-toast
         if (password.length < 6) {
-            toast.error("Input more than 6 characters");
+            Swal.fire({
+                title: 'Error!',
+                text: 'Password must be greater than 6 character.',
+                icon: 'error',
+                confirmButtonText: 'Try Again'
+              })
             return;
         }
         else {
-            toast.success("Successfully Registered!!!")
+            Swal.fire({
+                title: 'Success!',
+                text: 'You Successfully Logged In!',
+                icon: 'success',
+                confirmButtonText: 'Cool'
+              })
         }
 
 
