@@ -1,10 +1,11 @@
+
 import Swal from 'sweetalert2';
 
 const AddProduct = () => {
 
 
+
     const handleAddProduct = event =>{
-        
         event.preventDefault();
 
         const form = event.target;
@@ -40,6 +41,10 @@ const AddProduct = () => {
                     confirmButtonText: 'Cool'
                   })
             }
+
+            // event.target.reset();
+           
+
         })
 
     }
