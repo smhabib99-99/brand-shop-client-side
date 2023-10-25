@@ -15,4 +15,5 @@
 
 
 
-# Client-side Live link:
+# Client-side Live link:  https://brand-shop-client-d5117.web.app
+https://brand-shop-client-d5117.web.app/
