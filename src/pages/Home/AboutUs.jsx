@@ -7,7 +7,7 @@ const AboutUs = () => {
             <div className="grid md:grid-cols-3 mx-5 justify-center items-center text-center">
 
                 <div className="m-10">
-                    <h2>Arizona</h2>
+                    <h2 className="text-2xl">Arizona</h2>
                     <hr className="border-spacing-3" />
                     <p>Glendale AZ-9245 W Glendale Ave</p>
                     <span>9245 W Glendale Ave <br />
@@ -17,7 +17,7 @@ const AboutUs = () => {
                     </span>
                 </div>
                 <div className="m-10">
-                    <h2>California</h2>
+                    <h2 className="text-2xl">California</h2>
                     <hr className="border-spacing-3" />
                     <p>Glendale AZ-9245 W Glendale Ave</p>
                     <span>9245 W Glendale Ave <br />
@@ -27,7 +27,7 @@ const AboutUs = () => {
                     </span>
                 </div>
                 <div className="m-10">
-                    <h2>New York</h2>
+                    <h2 className="text-2xl">New York</h2>
                     <hr className="border-spacing-3" />
                     <p>Glendale AZ-9245 W Glendale Ave</p>
                     <span>9245 W Glendale Ave <br />
@@ -37,7 +37,7 @@ const AboutUs = () => {
                     </span>
                 </div>
                 <div className="m-10">
-                    <h2>Delaware</h2>
+                    <h2 className="text-2xl">Delaware</h2>
                     <hr className="border-spacing-3" />
                     <p>Glendale AZ-9245 W Glendale Ave</p>
                     <span>9245 W Glendale Ave <br />
@@ -47,7 +47,7 @@ const AboutUs = () => {
                     </span>
                 </div>
                 <div className="m-10">
-                    <h2>Connecticut</h2>
+                    <h2 className="text-2xl">Connecticut</h2>
                     <hr className="border-spacing-3" />
                     <p>Glendale AZ-9245 W Glendale Ave</p>
                     <span>9245 W Glendale Ave <br />
@@ -57,7 +57,7 @@ const AboutUs = () => {
                     </span>
                 </div>
                 <div className="m-10">
-                    <h2>Colorado</h2>
+                    <h2 className="text-2xl">Colorado</h2>
                     <hr className="border-spacing-3" />
                     <p>Glendale AZ-9245 W Glendale Ave</p>
                     <span>9245 W Glendale Ave <br />
