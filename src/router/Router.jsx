@@ -6,6 +6,7 @@ import AddProduct from "../pages/AddProduct/AddProduct";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import PrivateRoute from "../routerPrivate/PrivateRoute";
+import ProductDetail from "../pages/ProductDetail/ProductDetail";
 
 
 const router = createBrowserRouter([
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
             {
                 path:'/register',
                 element:<Register></Register>
+            },
+            {
+                path:'/productDetail',
+                element:<PrivateRoute><ProductDetail></ProductDetail></PrivateRoute>
             },
             {
                 path:'/myCart',
