@@ -22,7 +22,7 @@ const AddProduct = () => {
 
         // sending data to the server side from client side using POST method
 
-        fetch('http://localhost:5000/product',{
+        fetch('https://brand-shop-server-6zamcshnh-habibs-projects-11338489.vercel.app/product',{
             method:'POST',
             headers:{
                 'content-type': 'application/json'

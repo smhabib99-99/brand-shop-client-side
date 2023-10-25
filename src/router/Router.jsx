@@ -41,12 +41,12 @@ const router = createBrowserRouter([
             {
                 path:'/showProduct',
                 element:<ShowProduct></ShowProduct>,
-                loader:()=>fetch('http://localhost:5000/product')
+                loader:()=>fetch('https://brand-shop-server-6zamcshnh-habibs-projects-11338489.vercel.app/product')
             },
             {
                 path:'/updateProduct/:id',
                 element:<UpdateProduct></UpdateProduct>,
-                loader:({params})=>fetch('http://localhost:5000/product/${params.id}')
+                loader:({params})=>fetch(`https://brand-shop-server-6zamcshnh-habibs-projects-11338489.vercel.app/product/${params.id}`)
             }
             // {
             //     path:'/updateProduct',
