@@ -4,6 +4,7 @@ import toast from 'react-hot-toast';
 
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from '../../providers/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Login = () => {
 
@@ -42,11 +43,21 @@ const Login = () => {
 
         // react-hot-toast
         if (password.length < 6) {
-            toast.error("Input more than 6 characters");
+            Swal.fire({
+                title: 'Error!',
+                text: 'Password must be greater than 6 character.',
+                icon: 'error',
+                confirmButtonText: 'Try Again'
+              })
             return;
         }
         else {
-            toast.success("Successfully Registered!!!")
+            Swal.fire({
+                title: 'Success!',
+                text: 'You Successfully Logged In!',
+                icon: 'success',
+                confirmButtonText: 'Cool'
+              })
         }
 
 
