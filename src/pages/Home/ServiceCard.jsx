@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types';
 
 const ServiceCard = ({ service }) => {
 
@@ -23,3 +23,7 @@ const ServiceCard = ({ service }) => {
 };
 
 export default ServiceCard;
+
+ServiceCard.propTypes = {
+    service:PropTypes.node
+}

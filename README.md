@@ -1,8 +1,18 @@
-# React + Vite
+# Brand-Shop-client
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Project-Features:
+ 
+ #In this Project there are lots of features here I will mention some of them:
 
-Currently, two official plugins are available:
+ # 1. Register feature
+ # 2. Email and password Login feature
+ # 3. Google Login feature
+ # 4. Add Product feature
+ # 5. Update Product feature 
+ # 6. Toggle between login and register feature
+ # 7. Log out feature which enforces user to logged out when clicked
+ # 8. Private and Protected Route feature--> Where only logged in user can explore others can't.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+
+# Client-side Live link:

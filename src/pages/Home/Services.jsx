@@ -1,5 +1,5 @@
 import ServiceCard from "./ServiceCard";
-
+import PropTypes from 'prop-types';
 
 const Services = ({services}) => {
     return (
@@ -15,3 +15,7 @@ const Services = ({services}) => {
 };
 
 export default Services;
+
+Services.propTypes={
+    services:PropTypes.node
+}
